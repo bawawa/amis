@@ -41,11 +41,13 @@ export interface LotterySchema extends BaseSchema {
   // 开始按钮
   children?: React.ReactNode;
   //目标索引（中奖）
-  targetIndex?: number;
+  value?: number;
   // 结束回调
   onFinished?: (index: number) => void;
   // 数据源： 绑定当前环境变量, @default: '${items}'
   source?: SchemaTokenizeableString;
+
+  name: any;
 }
 
 @Renderer({

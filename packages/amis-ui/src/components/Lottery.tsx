@@ -17,13 +17,15 @@ interface SquareNineProps extends ThemeProps {
   // 开始按钮
   children?: React.ReactNode;
   //目标索引（中奖）
-  targetIndex?: number;
+  value?: number;
   // 结束回调
   onFinished?: (index: number) => void;
   // 数据源： 绑定当前环境变量, @default: '${items}'
   source?: SchemaTokenizeableString;
   //数据
   data: any;
+  //
+  name: any;
 }
 
 interface CallBackFn {
@@ -111,7 +113,6 @@ export class Lottery extends React.Component<SquareNineProps, SquareNineState> {
     const height = this.props.height || '300';
 
     let list: any;
-    let value: any;
 
     if (typeof source === 'string' && isPureVariable(source)) {
       list = resolveVariableAndFilter(source, data, '| raw') || undefined;
@@ -163,7 +164,7 @@ export class Lottery extends React.Component<SquareNineProps, SquareNineState> {
           </div>
           <div
             className="luckNineItem startBtn"
-            onClick={() => this.start(this.props.targetIndex || 0)}
+            onClick={() => this.start(this.props.value || 0)}
           >
             {this.props.children ? this.props.children : <span>开始</span>}
           </div>
