@@ -121,6 +121,7 @@ export class Lottery extends React.Component<SquareNineProps, SquareNineState> {
 
     this.list = list;
 
+    //TODO：九宫格用递归方式渲染
     return (
       <div
         className={cx('Lottery light')}
