@@ -43,7 +43,7 @@ export interface LotterySchema extends BaseSchema {
   //目标索引（中奖）
   targetIndex?: number;
   // 结束回调
-  callback?: (index: number) => void;
+  onFinished?: (index: number) => void;
   // 数据源： 绑定当前环境变量, @default: '${items}'
   source?: SchemaTokenizeableString;
 }
