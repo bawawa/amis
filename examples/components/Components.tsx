@@ -34,6 +34,13 @@ export const components = [
         )
       },
       {
+        label: 'HoverContainer 悬停容器',
+        path: '/zh-CN/components/hover-container',
+        component: React.lazy(() =>
+          import('../../docs/zh-CN/components/hover-container.md').then(wrapDoc)
+        )
+      },
+      {
         label: 'Collapse 折叠器',
         path: '/zh-CN/components/collapse',
         component: React.lazy(() =>
