@@ -16,6 +16,7 @@ import {CollapseSchema} from './renderers/Collapse';
 import {CollapseGroupSchema} from './renderers/CollapseGroup';
 import {ColorSchema} from './renderers/Color';
 import {ContainerSchema} from './renderers/Container';
+import {HoverContainerSchema} from './renderers/HoverContainer';
 import {SwitchContainerSchema} from './renderers/SwitchContainer';
 import {CRUDSchema} from './renderers/CRUD';
 import {CRUD2Schema} from './renderers/CRUD2';
@@ -387,6 +388,7 @@ export type SchemaObject =
   | CollapseGroupSchema
   | ColorSchema
   | ContainerSchema
+  | HoverContainerSchema
   | SwitchContainerSchema
   | CRUDSchema
   | CRUD2Schema

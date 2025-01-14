@@ -645,6 +645,12 @@ registerRenderer({
   type: 'container',
   getComponent: () => import('./renderers/Container')
 });
+
+// import './renderers/HoverContainer';
+registerRenderer({
+  type: 'hover-container',
+  getComponent: () => import('./renderers/HoverContainer')
+});
 // import './renderers/SwitchContainer';
 registerRenderer({
   type: 'switch-container',
